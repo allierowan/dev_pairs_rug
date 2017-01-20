@@ -22,7 +22,17 @@
   <%= pluralize(Candidate.all.size, "candidate") %>
 </p>
 
+<h3>All Candidates</h3>
+
 <table>
+  <tr>
+    <th>
+      Name
+    </th>
+    <th>
+      Experience
+    </th>
+  </tr>
   <% Candidate.all.each do |candidate| %>
     <tr>
       <td>
@@ -34,3 +44,35 @@
     </tr>
   <% end %>
 </table>
+
+<h3>Pairs</h3>
+<% if Candidate.all.size > 1 %>
+  <table>
+    <tr>
+      <th>
+        Person 1
+      </th>
+      <th>
+        Person 2
+      </th>
+      <th>
+        Optional Person 3
+      </th>
+    </tr>
+    <% CandidateMatches.all_matches.each do |pair| %>
+      <tr>
+        <td>
+          <%= pair.first.name %> (<%= pair.first.experience %>)
+        </td>
+        <td>
+          <%= pair[1].name %> (<%= pair[1].experience %>)
+        </td>
+        <td>
+          <% if pair[2] %>
+            <%= pair[2].name %>(<%= pair[2].experience %>)
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>
