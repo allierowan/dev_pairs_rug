@@ -1,0 +1,36 @@
+<ul>
+  <% @candidate.errors.full_messages.each do |error_message| %>
+    <li>
+      <%= error_message %>
+    </li>
+  <% end %>
+</ul>
+
+<%= form_for @candidate do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :experience %>
+  <%= f.text_field :experience %>
+
+  <%= f.submit "Sign Me Up!" %>
+
+<% end %>
+
+<p>
+  <%= pluralize(Candidate.all.size, "candidate") %>
+</p>
+
+<table>
+  <% Candidate.all.each do |candidate| %>
+    <tr>
+      <td>
+        <%= candidate.name %>
+      </td>
+      <td>
+        <%= candidate.experience %>
+      </td>
+    </tr>
+  <% end %>
+</table>
