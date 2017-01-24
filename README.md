@@ -22,6 +22,6 @@ $ rails db:migrate
 
 The app uses RSpec for testing and you can run the tests with the $ rspec spec command.
 
-License
+##License
 
 The app is available as open source under the terms of the MIT License.
