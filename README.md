@@ -1,24 +1,27 @@
-# README
+# RUG Pair Coding Challenge: Dev Pairs
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The challenge was to build a simple app to partner up programmers for a pair-programming session. The ideal pairs are made up of programmers of different experience levels, juniors with mids and mids with seniors if possible. The program also had to handle odd numbers.
 
-Things you may want to cover:
+## To run locally
 
-* Ruby version
+Install Postgresql
+```
+$ git clone
+```
+```
+$ bundle
+```
+```
+$ rails db:create
+```
+```
+$ rails db:migrate
+```
 
-* System dependencies
+## To test
 
-* Configuration
+The app uses RSpec for testing and you can run the tests with the $ rails test command.
 
-* Database creation
+License
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The app is available as open source under the terms of the MIT License.
