@@ -20,7 +20,7 @@ $ rails db:migrate
 
 ## To test
 
-The app uses RSpec for testing and you can run the tests with the '''$ rspec spec''' command.
+The app uses RSpec for testing and you can run the tests with the $ rspec spec command.
 
 License
 
